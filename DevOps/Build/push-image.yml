@@ -21,18 +21,18 @@ stages:
               npm install react-scripts
               npm install dotenv
               npm run build
-              docker build -t sahilrajputwins/frontend-image:latest .
+              docker build -t vineetsaini97/frontend-image:latest .
 
               cd ../backend
               npm install
               npm install dotenv
-              docker build -t sahilrajputwins/backend-image:latest .
+              docker build -t vineetsaini97/backend-image:latest .
             displayName: Build frontend & backend Docker images
 
           - script: |
               echo $(DOCKER_PASSWORD) | docker login -u $(DOCKER_USERNAME) --password-stdin
-              docker push sahilrajputwins/frontend-image:latest
-              docker push sahilrajputwins/backend-image:latest
+              docker push vineetsaini97/frontend-image:latest
+              docker push vineetsaini97/backend-image:latest
             displayName: Push Docker images to Docker Hub
 
   - stage: Deploy
