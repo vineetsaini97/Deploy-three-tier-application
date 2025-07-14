@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/vineetsaini97/kubernetes-demo.git'
+                git 'https://github.com/vineetsaini97/Deploy-three-tier-application.git'
             }
         }
 
