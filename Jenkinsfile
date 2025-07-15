@@ -31,33 +31,35 @@ pipeline {
                 }
             }
         }
-
-        stage('Deploy MySQL') {
-            steps {
-                bat 'kubectl apply -f k8s/mysql-deployment.yaml'
-                bat 'kubectl apply -f k8s/mysql-service.yaml'
-            }
-        }
-
-        stage('Deploy phpMyAdmin') {
-            steps {
-                bat 'kubectl apply -f k8s/phpmyadmin-deployment.yaml'
-                bat 'kubectl apply -f k8s/phpmyadmin-service.yaml'
-            }
-        }
-
-        stage('Deploy Backend') {
-            steps {
-                bat 'kubectl apply -f k8s/backend-deployment.yaml'
-                bat 'kubectl apply -f k8s/backend-service.yaml'
-            }
-        }
-
-        stage('Deploy Frontend') {
-            steps {
-                bat 'kubectl apply -f k8s/frontend-deployment.yaml'
-                bat 'kubectl apply -f k8s/frontend-service.yaml'
-            }
-        }
     }
 }
+
+//         stage('Deploy MySQL') {
+//             steps {
+//                 bat 'kubectl apply -f k8s/mysql-deployment.yaml'
+//                 bat 'kubectl apply -f k8s/mysql-service.yaml'
+//             }
+//         }
+
+//         stage('Deploy phpMyAdmin') {
+//             steps {
+//                 bat 'kubectl apply -f k8s/phpmyadmin-deployment.yaml'
+//                 bat 'kubectl apply -f k8s/phpmyadmin-service.yaml'
+//             }
+//         }
+
+//         stage('Deploy Backend') {
+//             steps {
+//                 bat 'kubectl apply -f k8s/backend-deployment.yaml'
+//                 bat 'kubectl apply -f k8s/backend-service.yaml'
+//             }
+//         }
+
+//         stage('Deploy Frontend') {
+//             steps {
+//                 bat 'kubectl apply -f k8s/frontend-deployment.yaml'
+//                 bat 'kubectl apply -f k8s/frontend-service.yaml'
+//             }
+//         }
+//     }
+// }
