@@ -3,13 +3,13 @@ pipeline {
 
     environment {
         GITHUB_USER = 'vineetsaini97'
-        GITHUB_REPO = 'Deploy-three-tier-application'
+        GITHUB_REPO = 'deploy-three-tier-application'
     }
 
     stages {
         stage('Checkout Code') {
             steps {
-                git branch: 'main', credentialsId: 'GITHUB_CREDS', url: 'https://github.com/vineetsaini97/Deploy-three-tier-application.git'
+                git branch: 'main', credentialsId: 'GITHUB_CREDS', url: 'https://github.com/vineetsaini97/deploy-three-tier-application.git'
             }
         }
 
