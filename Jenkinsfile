@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/vineetsaini97/Deploy-three-tier-application.git'
+                git branch: 'main', credentialsId: 'GITHUB_CREDS', url: 'https://github.com/vineetsaini97/Deploy-three-tier-application.git'
             }
         }
 
